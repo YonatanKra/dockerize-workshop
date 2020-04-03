@@ -1,0 +1,14 @@
+{
+  "name": "docker-n-co",
+  "version": "1.0.0",
+  "description": "Sample dockerized project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "yonatankra",
+  "license": "MIT"
+}
