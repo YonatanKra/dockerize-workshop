@@ -1,0 +1,12 @@
+version: "2"
+services:
+    web:
+        image: my-node-app:1.0.0
+        ports:
+            - "8080:8080"
+        depends_on:
+            - mongo
+    mongo:
+        image: my-db:1.0.0
+        ports:
+            - "27017:27017"
