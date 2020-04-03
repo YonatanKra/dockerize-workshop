@@ -1,3 +1,3 @@
 FROM bitnami/mongodb:latest
 
-VOLUME ${PWD}/db:/bitnami
+VOLUME ${PWD}/db/data:/bitnami
