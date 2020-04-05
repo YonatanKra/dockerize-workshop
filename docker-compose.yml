@@ -1,12 +1,25 @@
-version: "2"
+version: "3.4"
 services:
     web:
-        image: my-node-app:1.0.0
+        image: my-node-app
         ports:
             - "8080:8080"
         depends_on:
             - mongo
+        command: ["yarn", "start"]        
+        build:
+            context: .
+            dockerfile: ./app/Dockerfile
+        volumes:
+            - /app:/usr/src/app
     mongo:
         image: my-db:1.0.0
         ports:
             - "27017:27017"
+        healthcheck:
+            test:  ["CMD", "healthcheck"]
+            interval: 10s
+            timeout: 2s
+            retries: 10
+        volumes:
+                - /db/data:/bitnami
