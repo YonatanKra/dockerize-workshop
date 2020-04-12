@@ -2,4 +2,4 @@ FROM bitnami/mongodb:latest
 
 VOLUME ${PWD}/db/data:/bitnami
 
-COPY docker-healthcheck /usr/local/bin/
+COPY ./db/healthcheck.sh /usr/local/bin/

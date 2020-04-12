@@ -23,3 +23,6 @@ services:
             retries: 10
         volumes:
                 - /db/data:/bitnami
+        build:
+            context: .
+            dockerfile: ./db/Dockerfile
